@@ -11,17 +11,19 @@
 本项目基于 **Taichi** 高性能并行计算框架，实现了一个**万有引力粒子群仿真系统**。通过GPU并行计算模拟了10000个粒子在鼠标引力作用下的运动效果，展示了粒子系统的物理交互与实时渲染。
 
 ## 🏗️ 项目架构
+```bash
 CG_Lab/
-├── pyproject.toml # 项目配置文件
-├── README.md # 项目说明文档
-├── images/ # 演示图片/GIF存放目录
-│ └── demo.gif # 运行效果演示
+├── pyproject.toml          # 项目配置文件
+├── README.md               # 项目说明文档
+├── images/                 # 演示图片/GIF存放目录
+│   └── demo.gif            # 运行效果演示
 └── src/
-└── Work0/ # 实验零核心代码包
-├── init.py # 包标识文件
-├── config.py # 参数配置中心
-├── physics.py # GPU并行计算逻辑
-└── main.py # 程序入口与GUI渲染
+    └── Work0/              # 实验零核心代码包
+        ├── __init__.py     # 包标识文件
+        ├── config.py       # 参数配置中心
+        ├── physics.py      # GPU并行计算逻辑
+        └── main.py         # 程序入口与GUI渲染
+```
 
 ## 🚀 功能特性
 - **GPU并行加速**：基于Taichi框架实现10000+粒子的实时物理计算
