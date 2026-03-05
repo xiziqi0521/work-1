@@ -3,35 +3,51 @@
 #### 介绍
 实验1代码展示
 
-#### 软件架构
-软件架构说明
+# 万有引力粒子群仿真实验
 
+![演示动画](images/demo.gif)  <!-- 后续放上你的GIF演示图 -->
 
-#### 安装教程
+## 📋 项目简介
+本项目基于 **Taichi** 高性能并行计算框架，实现了一个**万有引力粒子群仿真系统**。通过GPU并行计算模拟了10000个粒子在鼠标引力作用下的运动效果，展示了粒子系统的物理交互与实时渲染。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 🏗️ 项目架构
+CG_Lab/
+├── pyproject.toml # 项目配置文件
+├── README.md # 项目说明文档
+├── images/ # 演示图片/GIF存放目录
+│ └── demo.gif # 运行效果演示
+└── src/
+└── Work0/ # 实验零核心代码包
+├── init.py # 包标识文件
+├── config.py # 参数配置中心
+├── physics.py # GPU并行计算逻辑
+└── main.py # 程序入口与GUI渲染
 
-#### 使用说明
+## 🚀 功能特性
+- **GPU并行加速**：基于Taichi框架实现10000+粒子的实时物理计算
+- **鼠标交互引力**：粒子群跟随鼠标位置产生动态引力效果
+- **物理系统模拟**：
+  - 万有引力计算
+  - 空气阻力衰减
+  - 边界弹性碰撞
+- **参数化配置**：所有物理参数集中在`config.py`中，便于调试
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 💻 技术栈
+- 编程语言：Python 3.12
+- 核心框架：Taichi (GPU并行计算)
+- 包管理工具：uv (现代Python包管理器)
+- 版本控制：Git + Gitee
 
-#### 参与贡献
+## ⚙️ 快速开始
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+### 环境配置
+```bash
+# 1. 安装 uv 包管理器
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# 2. 克隆项目
+git clone https://gitee.com/Admin0521/work01.git
+cd work01
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+# 3. 运行项目
+uv run -m src.Work0.main
